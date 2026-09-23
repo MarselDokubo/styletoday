@@ -23,6 +23,8 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -61,7 +63,7 @@ input {
 
 .eyebrow {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: .12em;
@@ -75,7 +77,7 @@ input {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .1em;
   text-transform: uppercase;
   border-bottom: 1px solid #dededb;
@@ -86,10 +88,10 @@ input {
 }
 
 .utility-bar {
-  height: 31px;
+  min-height: 34px;
   background: #151515;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .utility-inner {
@@ -121,54 +123,25 @@ input {
 }
 
 .logo-row {
-  min-height: 112px;
-  display: grid;
-  grid-template-columns: 44px 1fr 44px;
+  min-height: 190px;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .wordmark {
-  width: min(340px, 55vw);
-  justify-self: center;
-}
-
-.wordmark img {
-  height: 72px;
-  object-fit: contain;
-}
-
-.icon-button {
-  width: 38px;
-  height: 38px;
-  padding: 8px;
-  border: 0;
-  background: transparent;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
 }
 
-.menu-button {
-  flex-direction: column;
-  gap: 4px;
-}
-
-.menu-button span {
-  width: 18px;
-  height: 1px;
-  background: #111;
-}
-
-.search-button {
-  justify-self: end;
-}
-
-.search-button svg {
-  width: 19px;
-  height: 19px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
+.wordmark img,
+.site-logo-mark {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
 }
 
 .main-nav {
@@ -192,7 +165,7 @@ input {
 
 .nav-inner a {
   flex: none;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -213,7 +186,7 @@ input {
   justify-content: center;
   gap: 30px;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .membership-inner a {
@@ -251,12 +224,12 @@ input {
 .hero-note li {
   margin: 0 0 14px;
   font-family: var(--serif);
-  font-size: 15px;
-  line-height: 1.35;
+  font-size: 17px;
+  line-height: 1.45;
 }
 
 .text-link {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   border-bottom: 1px solid var(--ink);
   padding-bottom: 4px;
@@ -289,8 +262,8 @@ input {
 
 .ranked-story strong {
   font-family: var(--serif);
-  font-size: 15px;
-  line-height: 1.18;
+  font-size: 17px;
+  line-height: 1.24;
   font-weight: 400;
 }
 
@@ -333,8 +306,8 @@ input {
   margin: 0 0 14px;
   color: #393939;
   font-family: var(--serif);
-  font-size: 14px;
-  line-height: 1.42;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .byline {
@@ -342,7 +315,7 @@ input {
   gap: 10px;
   flex-wrap: wrap;
   color: #707070;
-  font-size: 9px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .06em;
 }
@@ -386,7 +359,7 @@ input {
 }
 
 .article-card--compact h3 {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.12;
   margin: 4px 0 8px;
 }
@@ -438,7 +411,7 @@ input {
 }
 
 .section-header a {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -589,8 +562,8 @@ input {
 .newsletter-panel p {
   margin-top: 0;
   max-width: 480px;
-  line-height: 1.5;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .newsletter-panel form,
@@ -647,7 +620,7 @@ input {
 }
 
 .site-footer h3 {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin: 0 0 16px;
@@ -656,13 +629,13 @@ input {
 .site-footer a {
   display: block;
   color: #d7d7d7;
-  font-size: 12px;
+  font-size: 14px;
   margin: 9px 0;
 }
 
 .footer-newsletter p {
   color: #c7c7c7;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -674,7 +647,7 @@ input {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 9px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .07em;
 }
@@ -1077,15 +1050,17 @@ input {
   }
 
   .logo-row {
-    min-height: 82px;
+    min-height: 135px;
   }
 
   .wordmark {
-    width: 240px;
+    width: auto;
   }
 
-  .wordmark img {
-    height: 54px;
+  .wordmark img,
+  .site-logo-mark {
+    width: 110px;
+    height: 110px;
   }
 
   .nav-inner {
@@ -1095,7 +1070,7 @@ input {
 
   .membership-inner {
     justify-content: space-between;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .membership-inner span {
