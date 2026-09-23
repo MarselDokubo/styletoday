@@ -37,7 +37,7 @@ export function Header() {
         <div className="page-shell logo-row">
           <Link href="/" className="wordmark" aria-label="Style Today Magazine home">
             <img
-              src="/logo/Logo_Mark.svg"
+              src="/logo/Logo_Background.svg"
               alt="Style Today Magazine"
               className="site-logo-mark"
             />
