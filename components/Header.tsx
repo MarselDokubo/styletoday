@@ -35,19 +35,12 @@ export function Header() {
 
       <header className="site-header">
         <div className="page-shell logo-row">
-          <button className="icon-button menu-button" aria-label="Open menu">
-            <span />
-            <span />
-            <span />
-          </button>
           <Link href="/" className="wordmark" aria-label="Style Today Magazine home">
-            <img src="/logo/style-today-black.svg" alt="Style Today Magazine" />
-          </Link>
-          <Link href="/search" className="icon-button search-button" aria-label="Search">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="6.7" />
-              <path d="m16 16 5 5" />
-            </svg>
+            <img
+              src="/logo/Logo_Mark.svg"
+              alt="Style Today Magazine"
+              className="site-logo-mark"
+            />
           </Link>
         </div>
 
