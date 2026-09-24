@@ -216,7 +216,7 @@ input {
 .visual-hero__slides {
   z-index: -2;
   overflow: hidden;
-  background: #111;
+  background: #111 url("/images/style-hero-model.webp") center 36% / cover no-repeat;
 }
 
 .visual-hero__slide {
@@ -237,7 +237,7 @@ input {
 .visual-hero__slide--portrait {
   z-index: 2;
   opacity: 0;
-  background-image: url("/images/style-hero-landscape.webp");
+  background-image: url("/images/style-hero-model.webp");
   background-position: center 36%;
   animation: heroPortrait 16s cubic-bezier(.45, 0, .2, 1) infinite;
 }
