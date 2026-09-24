@@ -16,35 +16,24 @@ export default async function Home() {
   return (
     <main>
       <section className="visual-hero" aria-labelledby="visual-hero-title">
-        <div className="visual-hero__media visual-hero__media--landscape">
-          <img
-            src="/images/style-hero-landscape.webp"
-            alt="Black-and-white Style Today fashion portrait"
-            fetchPriority="high"
-          />
-        </div>
-        <div className="visual-hero__media visual-hero__media--portrait">
-          <img
-            src="/images/style-hero-portrait.webp"
-            alt="Black-and-white Style Today close-up fashion portrait"
-            fetchPriority="high"
-          />
-        </div>
         <div className="visual-hero__shade" aria-hidden="true" />
 
         <div className="page-shell visual-hero__content">
+          <div className="visual-hero__kicker">
+            <span>Style Today</span>
+            <span>Fashion / Culture / Business</span>
+          </div>
+
           <div className="visual-hero__copy">
-            <div className="visual-hero__kicker">
-              <span>Style Today</span>
-              <span>Fashion / Culture / Business</span>
-            </div>
-            <h1 id="visual-hero-title">Observing and reporting the movement of fashion.</h1>
+            <h1 id="visual-hero-title">Fashion is culture in motion.</h1>
+
             <div className="visual-hero__bottom">
               <p>
-                We cover the people, brands, culture and ideas shaping what fashion is and what it becomes next.
+                Style Today follows the people, brands and ideas defining what fashion is
+                and what it becomes next.
               </p>
               <Link className="visual-hero__cta" href="#latest-stories">
-                Enter the magazine <span aria-hidden="true">↓</span>
+                Explore the magazine <span aria-hidden="true">↓</span>
               </Link>
             </div>
           </div>
