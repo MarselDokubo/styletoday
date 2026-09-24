@@ -71,7 +71,10 @@ export default async function Home() {
             {articles.slice(0, 5).map((article, index) => (
               <Link className="ranked-story" href={`/article/${article.slug}`} key={article.slug}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{article.title}</strong>
+                <div>
+                  <strong>{article.title}</strong>
+                  <small>By {article.author}</small>
+                </div>
               </Link>
             ))}
           </div>

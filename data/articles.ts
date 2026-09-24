@@ -16,6 +16,7 @@ export type Article = {
   image: string;
   imageAlt: string;
   portraitImage?: string;
+  gallery?: Array<{ src: string; alt: string }>;
   featured?: boolean;
   body: string[];
   credits?: Credit[];
@@ -35,6 +36,16 @@ export const articles: Article[] = [
     "image": "/images/she-poetry-in-textile.webp",
     "imageAlt": "Style Today fashion editorial, SHE: Poetry in Textile",
     "portraitImage": "/images/635179-jpg.webp",
+    "gallery": [
+      { "src": "/images/635182-jpg.webp", "alt": "Teevoo Tovo Eneh and Ugochi Isaac in the SHE textile editorial" },
+      { "src": "/images/635183-jpg.webp", "alt": "SHE editorial portrait featuring sculptural gele and textile styling" },
+      { "src": "/images/635184-jpg.webp", "alt": "SHE editorial portrait with beaded hair and sculptural styling" },
+      { "src": "/images/635185-jpg.webp", "alt": "SHE editorial fashion portrait with Aso-oke inspired patchwork" },
+      { "src": "/images/640464-jpg.webp", "alt": "SHE textile editorial portrait in richly layered woven textiles" },
+      { "src": "/images/640466-jpg.webp", "alt": "Teevoo Tovo Eneh and Ugochi Isaac seated together in the SHE editorial" },
+      { "src": "/images/640473-jpg.webp", "alt": "SHE editorial full-length portrait with sculptural pink gele and denim" },
+      { "src": "/images/643834-jpg.webp", "alt": "Beauty portrait from the SHE textile editorial" }
+    ],
     "featured": true,
     "quote": "She looks at you, not seeking acceptance, but establishing a presence.",
     "body": [
@@ -221,7 +232,7 @@ export const articles: Article[] = [
   },
   {
     "slug": "dressing-for-different-occasions",
-    "title": "Dressing for Different Occasions",
+    "title": "Dressing For Different Occasions",
     "kicker": "Style Guide",
     "dek": "The point is not to be the most stylish person in the room. It is to understand the room — and still look unmistakably like yourself.",
     "category": "Style",

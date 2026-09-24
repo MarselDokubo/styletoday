@@ -22,7 +22,7 @@ export function ArticleCard({ article, variant = "standard", hideImage = false }
         </h3>
         {variant !== "compact" && <p>{article.dek}</p>}
         <div className="byline">
-          <span>{article.author}</span>
+          <span>By {article.author}</span>
           <span>{article.dateLabel}</span>
         </div>
       </div>

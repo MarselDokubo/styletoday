@@ -76,6 +76,16 @@ export default async function ArticlePage({
               </figure>
             )}
 
+            {article.gallery && article.gallery.length > 0 && (
+              <section className="article-gallery" aria-label="More images from this story">
+                {article.gallery.map((image, index) => (
+                  <figure key={image.src} className={index === 0 ? "article-gallery__wide" : undefined}>
+                    <img src={image.src} alt={image.alt} loading="lazy" />
+                  </figure>
+                ))}
+              </section>
+            )}
+
             {article.credits && (
               <section className="credits">
                 <span className="eyebrow">Credits</span>
