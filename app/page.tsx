@@ -16,6 +16,10 @@ export default async function Home() {
   return (
     <main>
       <section className="visual-hero" aria-labelledby="visual-hero-title">
+        <div className="visual-hero__slides" aria-hidden="true">
+          <div className="visual-hero__slide visual-hero__slide--runway" />
+          <div className="visual-hero__slide visual-hero__slide--portrait" />
+        </div>
         <div className="visual-hero__shade" aria-hidden="true" />
 
         <div className="page-shell visual-hero__content">

@@ -12,13 +12,7 @@ const nav = [
 export function Header() {
   return (
     <>
-      <div className="ad-strip" aria-label="Advertisement area">
-        <span>STYLE TODAY</span>
-        <strong>THE MOVEMENT OF FASHION</strong>
-        <span>EDITORIAL • CULTURE • BUSINESS</span>
-      </div>
-
-      <div className="utility-bar">
+<div className="utility-bar">
         <div className="page-shell utility-inner">
           <div className="utility-links">
             <Link href="/about">About</Link>
