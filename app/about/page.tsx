@@ -6,6 +6,30 @@ export default function AboutPage() {
   return (
     <main>
       <section className="about-hero">
+        <div className="about-hero-bento" aria-hidden="true">
+          <figure className="about-hero-tile about-hero-tile--one">
+            <img src="/images/635184-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--two">
+            <img src="/images/643834-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--three">
+            <img src="/images/640466-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--four">
+            <img src="/images/640464-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--five">
+            <img src="/images/635183-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--six">
+            <img src="/images/640473-jpg.webp" alt="" />
+          </figure>
+          <figure className="about-hero-tile about-hero-tile--seven">
+            <img src="/images/635182-jpg.webp" alt="" />
+          </figure>
+        </div>
+        <div className="about-hero-shade" aria-hidden="true" />
         <div className="page-shell about-hero-inner">
           <span className="eyebrow">About Style Today Magazine</span>
           <h1>Observing and Reporting the Movement of Fashion.</h1>
