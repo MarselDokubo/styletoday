@@ -202,9 +202,9 @@ input {
   min-height: clamp(650px, 80vh, 880px);
   overflow: hidden;
   color: #fff;
-  background-image: url("/images/style-hero-landscape.webp");
+  background-image: url("/images/style-hero-runway.webp");
   background-size: cover;
-  background-position: center 38%;
+  background-position: center center;
   border-top: 5px solid var(--red);
 }
 
