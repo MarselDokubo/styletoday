@@ -216,7 +216,7 @@ input {
 .visual-hero__slides {
   z-index: -2;
   overflow: hidden;
-  background: #111 url("/images/style-hero-model.webp") center 36% / cover no-repeat;
+  background: #111 url("/images/style-hero-model-landscape.png") center 36% / cover no-repeat;
 }
 
 .visual-hero__slide {
@@ -237,7 +237,7 @@ input {
 .visual-hero__slide--portrait {
   z-index: 2;
   opacity: 0;
-  background-image: url("/images/style-hero-model.webp");
+  background-image: url("/images/style-hero-model-landscape.png");
   background-position: center 36%;
   animation: heroPortrait 16s cubic-bezier(.45, 0, .2, 1) infinite;
 }
@@ -1250,7 +1250,8 @@ input {
   }
 
   .visual-hero__slide--portrait {
-    background-position: 58% center;
+    background-image: url("/images/style-hero-model-portrait.png");
+    background-position: center 30%;
   }
 
   .visual-hero {
