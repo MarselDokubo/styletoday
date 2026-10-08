@@ -62,28 +62,42 @@ export default async function ArticlePage({
 
           <div className="article-copy">
             {article.quote && <blockquote>{article.quote}</blockquote>}
-            {article.body.map((paragraph, index) =>
-              paragraph.length < 46 && !/[.!?]$/.test(paragraph) ? (
-                <h2 className="article-subhead" key={index}>{paragraph}</h2>
-              ) : (
-                <p key={index}>{paragraph}</p>
-              )
-            )}
-
-            {article.portraitImage && (
-              <figure className="article-inline-image">
-                <img src={article.portraitImage} alt="" loading="lazy" />
-              </figure>
-            )}
-
-            {article.gallery && article.gallery.length > 0 && (
-              <section className="article-gallery" aria-label="More images from this story">
-                {article.gallery.map((image, index) => (
-                  <figure key={image.src} className={index === 0 ? "article-gallery__wide" : undefined}>
-                    <img src={image.src} alt={image.alt} loading="lazy" />
+            {article.contentBlocks && article.contentBlocks.length > 0 ? (
+              article.contentBlocks.map((block, index) =>
+                block.type === "image" ? (
+                  <figure className="article-inline-image" key={"image-" + index}>
+                    <img src={block.src} alt={block.alt} loading="lazy" />
                   </figure>
-                ))}
-              </section>
+                ) : (
+                  <p key={"paragraph-" + index}>{block.text}</p>
+                )
+              )
+            ) : (
+              <>
+                {article.body.map((paragraph, index) =>
+                  paragraph.length < 46 && !/[.!?]$/.test(paragraph) ? (
+                    <h2 className="article-subhead" key={index}>{paragraph}</h2>
+                  ) : (
+                    <p key={index}>{paragraph}</p>
+                  )
+                )}
+
+                {article.portraitImage && (
+                  <figure className="article-inline-image">
+                    <img src={article.portraitImage} alt="" loading="lazy" />
+                  </figure>
+                )}
+
+                {article.gallery && article.gallery.length > 0 && (
+                  <section className="article-gallery" aria-label="More images from this story">
+                    {article.gallery.map((image, index) => (
+                      <figure key={image.src} className={index === 0 ? "article-gallery__wide" : undefined}>
+                        <img src={image.src} alt={image.alt} loading="lazy" />
+                      </figure>
+                    ))}
+                  </section>
+                )}
+              </>
             )}
 
             {article.credits && (
