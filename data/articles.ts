@@ -37,7 +37,7 @@ export const articles: Article[] = [
     "author": "Samuel Adzege",
     "date": "2026-10-07",
     "dateLabel": "7 October 2026",
-    "image": "/images/new-content/lagos-fashion-week-2026/01.webp",
+    "image": "/images/new-content/lagos-fashion-week-2026/01.jpeg",
     "imageAlt": "Lagos Fashion Week 2026: The names, ideas and craft shaping this season",
     "body": [
         "Lagos Fashion Week returns from 28 October to 1 November 2026 at the Lagos FWT Tents, Federal Palace Hotel, Lagos, bringing another season of Nigerian and African fashion into focus. This year’s edition is centred around CRAFTED: Heritage. Innovation. Circular Futures., a theme that looks at the knowledge, skill and creative processes behind African fashion and how they can shape its future.",
@@ -47,11 +47,11 @@ export const articles: Article[] = [
     ],
     "contentBlocks": [
         { "type": "paragraph", "text": "Lagos Fashion Week returns from 28 October to 1 November 2026 at the Lagos FWT Tents, Federal Palace Hotel, Lagos, bringing another season of Nigerian and African fashion into focus. This year’s edition is centred around CRAFTED: Heritage. Innovation. Circular Futures., a theme that looks at the knowledge, skill and creative processes behind African fashion and how they can shape its future." },
-        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/02.webp", "alt": "Models on the Lagos Fashion Week runway" },
+        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/02.jpeg", "alt": "Models on the Lagos Fashion Week runway" },
         { "type": "paragraph", "text": "The idea feels particularly timely. As conversations around sustainability, local production and cultural preservation continue to influence fashion, Lagos Fashion Week is looking at how heritage and contemporary design can exist together. From traditional making techniques and materials to new approaches to circularity, the season puts the process behind the clothes just as much in focus as the finished pieces." },
-        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/03.webp", "alt": "Hand embroidery highlighting African craft and making techniques" },
+        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/03.jpeg", "alt": "Hand embroidery highlighting African craft and making techniques" },
         { "type": "paragraph", "text": "One of the highlights to watch is this year’s Green Access cohort, featuring five emerging designers: Dorcas Kadiri of AFRIQUE KOD, Kalu David of DAVIDBLACK, Mako Akolam of KOFFI MAAKO, Oreoluwa Falase of BYFALASE, and Tammytara Abaku of ABIYETARA. The programme is taking a slightly different approach this year, giving the designers a full year to deepen their craft, strengthen their identities and build towards retail readiness ahead of Lagos Fashion Week 2027." },
-        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/04.webp", "alt": "Green Access 2026 cohort — meet the designers" },
+        { "type": "image", "src": "/images/new-content/lagos-fashion-week-2026/04.jpeg", "alt": "Green Access 2026 cohort — meet the designers" },
         { "type": "paragraph", "text": "With its focus on craft, heritage and what comes next, Lagos Fashion Week 2026 is shaping up to be a season worth paying attention to, not only for the clothes that will reach the runway, but for the ideas and makers behind them." },
         { "type": "paragraph", "text": "Written by Samuel Adzege" },
         { "type": "paragraph", "text": "Edited by Tonye Hart" }
