@@ -32,42 +32,37 @@ Open `http://localhost:3000`.
 
 ## WordPress integration
 
-When the WordPress CMS is ready, add the WordPress base URL to `.env.local`:
-
-```env
-WORDPRESS_API_URL=https://cms.yoursite.com
-NEXT_PUBLIC_SITE_URL=https://www.yoursite.com
-```
-
-The frontend already calls:
+Style Today is prepared for a **headless WordPress** setup. The recommended CMS address is:
 
 ```text
-/wp-json/wp/v2/posts?_embed=1&per_page=100
+https://cms.styletodaymagazine.com
 ```
 
-If WordPress is unavailable or the environment variable is absent, the website automatically falls back to `data/articles.ts`.
+The public magazine remains on Vercel at `styletodaymagazine.com`, while editors sign in to WordPress separately to create and publish stories.
 
-### Recommended WordPress content model
+Add the CMS URL to Vercel and to `.env.local` when developing locally:
 
-Use regular WordPress Posts initially:
+```env
+WORDPRESS_API_URL=https://cms.styletodaymagazine.com
+NEXT_PUBLIC_SITE_URL=https://styletodaymagazine.com
+```
+
+The frontend reads published WordPress posts through the REST API. It supports:
 
 - **Title** → article headline
 - **Excerpt** → dek / standfirst
-- **Content** → article body
-- **Featured image** → hero image
+- **Content** → paragraphs, H2/H3 headings, pull quotes and inline images in editorial order
+- **Featured image** → article hero / card image
 - **Author** → byline
-- **Category** → Fashion / Business / Culture / Runway / Style / News
+- **Category** → site section
 - **Slug** → frontend article URL
+- **Sticky post** → homepage lead story
 
-For a second phase, add custom fields (via ACF or native custom fields) for:
-- kicker
-- photographer
-- credits
-- pull quote
-- alternate / inline image
-- homepage feature status
-- sponsored-content disclosure
-- SEO title / description
+During migration, WordPress posts are merged with the existing local archive. If the same slug exists in both places, the WordPress version wins. This means new content can be published from the CMS immediately without removing the existing archive.
+
+Published content is refreshed by the frontend approximately once per minute. If WordPress is unavailable or the environment variable is absent, the local editorial archive remains available.
+
+For a later phase, custom fields can be added for photographer credits, custom kickers, homepage flags, sponsored-content disclosure and richer SEO controls.
 
 ## Deployment
 

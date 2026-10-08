@@ -19,7 +19,9 @@ export type Article = {
   gallery?: Array<{ src: string; alt: string }>;
   contentBlocks?: Array<
     | { type: "paragraph"; text: string }
-    | { type: "image"; src: string; alt: string }
+    | { type: "heading"; text: string }
+    | { type: "quote"; text: string }
+    | { type: "image"; src: string; alt: string; caption?: string }
   >;
   featured?: boolean;
   body: string[];

@@ -63,15 +63,26 @@ export default async function ArticlePage({
           <div className="article-copy">
             {article.quote && <blockquote>{article.quote}</blockquote>}
             {article.contentBlocks && article.contentBlocks.length > 0 ? (
-              article.contentBlocks.map((block, index) =>
-                block.type === "image" ? (
-                  <figure className="article-inline-image" key={"image-" + index}>
-                    <img src={block.src} alt={block.alt} loading="lazy" />
-                  </figure>
-                ) : (
-                  <p key={"paragraph-" + index}>{block.text}</p>
-                )
-              )
+              article.contentBlocks.map((block, index) => {
+                if (block.type === "image") {
+                  return (
+                    <figure className="article-inline-image" key={"image-" + index}>
+                      <img src={block.src} alt={block.alt} loading="lazy" />
+                      {block.caption && <figcaption>{block.caption}</figcaption>}
+                    </figure>
+                  );
+                }
+
+                if (block.type === "heading") {
+                  return <h2 className="article-subhead" key={"heading-" + index}>{block.text}</h2>;
+                }
+
+                if (block.type === "quote") {
+                  return <blockquote key={"quote-" + index}>{block.text}</blockquote>;
+                }
+
+                return <p key={"paragraph-" + index}>{block.text}</p>;
+              })
             ) : (
               <>
                 {article.body.map((paragraph, index) =>
